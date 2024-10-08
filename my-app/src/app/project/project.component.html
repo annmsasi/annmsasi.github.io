@@ -1,0 +1,28 @@
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body><div class="project">
+  <div class="tp">
+    <div class="picture">
+      <button>
+        <img [src]="imageUrl" alt="Project Image">
+      </button>
+    </div>
+    <div class="divider"></div>
+    <div class="title">
+      <h1>{{title}}</h1>
+    </div>
+  </div>
+  <div class="description-tools">
+    <div class="description">
+      <p>{{ description }}</p>
+    </div>
+    <div class="tools">
+      <p>Tools: {{ tools }}</p>
+    </div>
+  </div>
+</div>
+</body>

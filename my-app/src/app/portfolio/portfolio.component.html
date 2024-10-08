@@ -1,0 +1,53 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="profile-page">
+    <nav>
+      <div class="nav-items">
+        <a routerLink="/" routerLinkActive="active">Home</a>
+        <a routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+        <!-- <a routerLink="/profile" routerLinkActive="active">Profile</a> -->
+      </div>
+    </nav>
+    <div class = "content">
+    <div class = "top">
+      <h1 class = "welcome">Take a look at some of my work!</h1>
+      <a href="https://github.com/annmsasi">
+        <button>
+        <img class = "github" src="assets/Octicons-mark-github.svg">
+      </button>
+      </a>
+    </div>
+
+    <app-project
+      imageUrl="assets/CLEAN.png"
+      title= "CLEAN"
+      description="A chrome extension designed to identify possible carcinogenic ingredients in beauty products.
+
+      This extension utilizes a Sephora data set to analyze whether the products contain carcinogenic ingredients. Simply enter the exact product name and view any possibly harmful ingredients! Best when used while online shopping to see if your desired product may be harmful
+
+      The extension is written utilizing Javascript and HTML to create a a popup window within a Google Chrome Tab."
+      tools="HTML, CSS, JavaScript">
+    </app-project>
+
+    <app-project
+      imageUrl="assets/Octicons-mark-github.svg"
+      title = "Data Structures in C & C++"
+      description="4 C++ and 4 C projects utilizing and creating linked lists, stacks, queues, hash tables, trees, heaps, and graph ADTS"
+      tools="C, C++, Git, GitHub">
+    </app-project>
+    <app-project
+    imageUrl="assets/Octicons-mark-github.svg"
+    title = "Ann's Task tracker"
+    description="This is a basic React app designed to track and display events/tasks. Users can easily add, edit, and delete events, as well as set reminders for them. The app offers a simple and intuitive interface for managing your daily tasks effectively.
+    "
+    tools="JavaScript, React, HTML/CSS">
+  </app-project>
+
+
+  </div>
+</div>
+</body>
