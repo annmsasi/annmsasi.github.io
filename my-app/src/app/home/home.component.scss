@@ -1,47 +1,55 @@
+
 .profile-page {
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  font-family: 'Arial', sans-serif; // Use a clean font family for better readability
+  z-index: 1000;
+  font-family: 'Arial', sans-serif;
 
   nav {
     display: flex;
+    border-radius: 3%;
+    padding-top:0%;
+    margin-top:-16px auto;
     align-items: center;
-    justify-content: space-between; // Spread out items across the nav
-    background-color: #6a80d6; // Softer, more muted blue for a refined look
-    padding: 1.5rem 3rem; // Adjusted padding for more spaciousness
+    justify-content: space-between;
+    background-color: #0a282bbd;
+    padding: 1.5rem 3rem;
     margin-bottom: 2vw;
-    width: 100vw;
-    box-sizing: border-box;
-    border-radius: 12px; // Slightly more rounded corners for elegance
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); // A smoother, slightly larger shadow
-    font-family: 'Helvetica Neue', Arial, sans-serif; // Cleaner font choice
+    width: 100vw; // Use viewport width to ensure it spans across the entire screen
+    // box-sizing: border-box;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 
     a {
-      color: #f0f0f0; // Use a softer white for links to reduce harsh contrast
+      color: #ffffffbf;
       text-decoration: none;
-      padding: 12px 18px; // Slightly more padding for a luxurious feel
+      justify-content: space-between;
+      padding: 12px 18px;
       border-radius: 6px;
       font-size: 1rem;
-      font-weight: 500; // Medium weight for a more polished look
-      transition: background-color 0.4s ease, transform 0.3s ease; // Smoother transitions for hover effects
+      font-weight: 500;
+      transition: background-color 0.4s ease, transform 0.3s ease;
 
       &:hover {
-        background-color: rgba(255, 255, 255, 0.15); // Subtle lighter overlay on hover
-        transform: translateY(-3px); // More noticeable lift on hover
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateY(-3px);
       }
 
-      &:active {
-        transform: translateY(1px); // Slight push-down effect when clicked
-      }
+      // &:active {
+      //   transform: translateY(1px);
+      // }
     }
 
-    .active {
-      background-color: #5a6bb5; // Slightly darker shade for active link
-      font-weight: 600; // Bolder weight for active link
-    }
+    // .active {
+    //   background-color: #5a6bb5;
+    //   font-weight: 600;
+    // }
   }
+}
 
 
   .middle {
@@ -98,66 +106,100 @@ $box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 
 .about-me-section {
   display: flex;
-  flex-direction: row;
+  border-radius: 10px;
   max-width: 80vw;
   margin: 0 auto;
   padding: 2rem;
   @include box-shadow($box-shadow);
 
+  // Set flex-grow to the sections to control their widths
   .about-description,
-    .tools-Technologies {
-      flex: 1;
-      font-family: 'Georgia', serif;
-      color: black;
-      text-align: center;
+  .tools-Technologies {
+    font-family: 'Georgia', serif;
+    color: black;
+    display: flex; /* Enable flexbox on child sections */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+  }
+
+  // Vertical line between sections
+  .divider {
+    border-right: 1px solid black;
+    height: auto;
+    margin: 0 2rem;
+  }
+
+  // Tools & Technologies section
+  .tools-Technologies {
+    flex: 1; /* Keep the smaller size */
+    font-family: 'Georgia', serif; /* Elegant serif font */
+    color: #444; /* Slightly lighter black for better readability */
+    display: flex; /* Enable flexbox on child sections */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center; /* Center text */
+    background-color: #f9f9f9; /* Light background color for contrast */
+    border-radius: 10px; /* Add rounded corners */
+    padding: 3rem; /* Increased padding for more space */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s; /* Add transition effect for hover */
+    margin-top: 1.5rem; /* Space above the section */
+    margin-bottom: 1.5rem; /* Space below the section */
+
+    h1 {
+      font-size: 2.8rem; /* Increased font size for heading */
+      margin-bottom: 1.5rem; /* Space below heading */
+      font-weight: 700; /* Bolder font for emphasis */
+      color: #333; /* Darker color for better contrast */
+      text-transform: uppercase; /* Transform text to uppercase for emphasis */
+      letter-spacing: 1.5px; /* More spacing between letters */
+      border-bottom: 2px solid #007BFF; /* Change underline color for emphasis */
+      padding-bottom: 0.5rem; /* Add space below the heading */
     }
 
-    // About section heading
-    .about-description {
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-        color: black;
-      }
-
-      p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        text-align: center;
-      }
-    }
-
-    // Vertical line between sections
-    .divider {
-      border-right: 1px solid black;
-      height: auto;
-      margin: 0 2rem;
-    }
-
-    // Tools & Technologies section
-    .tools-Technologies {
-      h1 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        font-weight: 600;
-        color: black;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        font-size: 1.2rem;
-        line-height: 1.6;
-        text-align: center;
-      }
+    ul {
+      list-style: none; /* Remove default list styling */
+      padding: 0;
+      font-size: 1.4rem; /* Slightly larger font size for better readability */
+      line-height: 1.8; /* Increased line height for better spacing */
+      text-align: center; /* Center the list items */
+      margin-top: 2rem; /* Space above the list */
 
       li {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem; /* Increased space between list items */
+        position: relative; /* Position for pseudo-element */
+
       }
     }
+
+    &:hover {
+      transform: translateY(-5px); /* Slight lift effect on hover */
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+    }
   }
+
+  // About section heading
+  .about-description {
+    max-width: 60%;
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+      color: black;
+    }
+
+    p {
+      font-size: 1.5vw;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      text-align: center; // Center the paragraph text
+    }
+  }
+}
+
 }
   .experience-section {
     width: 90vw;
@@ -207,6 +249,6 @@ $box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
     }
   }
-}
+
 
 
